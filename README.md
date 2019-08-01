@@ -1,2 +1,2 @@
-# DepTest_ModuleA
-Dependency Test Module A
+# DepTest_Logging
+Dependency Test - Logging Module

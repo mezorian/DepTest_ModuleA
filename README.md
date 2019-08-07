@@ -17,16 +17,13 @@ repoURL="https://github.com/mezorian/DepTest_ModuleA.git"
 branch="master"
 manifest="default.xml"
 
-# create new directory to build in
-mkdir ${repoName}
+# clone this repository
+git clone ${repoURL}
 cd ${repoName}
 
-# download repo with all its dependency repos
+# download all depency repos
 repo init -u ${repoURL} -b ${branch} -m ${manifest}
 repo sync
-
-# copy the main project into the recently created directory
-cp -r .repo/manifests/* .
 
 # build
 source /opt/qt55/bin/qt55-env.sh

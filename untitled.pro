@@ -22,7 +22,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-HEADERS += \ \
-    Logger.h \
-    ModuleA.h
+HEADERS += \
+    ModuleA.h \
+    mezorian/DepTest_Logging/Logger.h
 

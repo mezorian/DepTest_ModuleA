@@ -3,6 +3,8 @@
 
 #include "mezorian/DepTest_Logging/Logger.h"
 
+using Logger = logger6::Logger;
+
 class ModuleA {
     public:
         ModuleA() {}
@@ -11,5 +13,6 @@ class ModuleA {
             l.log("ModuleA is doing smth");
         }
 };
+
 
 #endif // ModuleA_H

@@ -5,20 +5,20 @@ before_install:
   - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
   - sudo apt-get update -qq
   - pip install --user cpp-coveralls
-  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-  - chmod a+x ~/bin/repo
 
 install:
   - sudo apt-get -y install qt55[QTPACKAGE]
+  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  - chmod a+x ~/bin/repo
+  - git config --global color.ui false
 
 script:
-  - ls -la
-  - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH}"
+  - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH} ${TRAVIS_BUILD_WEB_URL}"
+  - printenv
   - repoName="DepTest_ModuleA"
   - repoURL="https://github.com/mezorian/DepTest_ModuleA.git"
-  - branch="master"
+  - branch=${TRAVIS_BRANCH}
   - manifest="default.xml"
-  - git config --global color.ui false
   - repo init -u ${repoURL} -b ${branch} -m ${manifest}
   - repo sync
   - ls -la

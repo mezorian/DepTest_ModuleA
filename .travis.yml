@@ -17,6 +17,7 @@ script:
   - repoURL="https://github.com/${TRAVIS_REPO_SLUG}.git"
   - branch=${TRAVIS_BRANCH}
   - manifest="default.xml"
+  - echo "starting repo init for ${repoURL}, branch ${branch}, manifest-file ${manifest}"
   - repo init -u ${repoURL} -b ${branch} -m ${manifest}
   - repo sync
   - ls -la

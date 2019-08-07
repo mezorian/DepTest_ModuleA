@@ -18,7 +18,6 @@ branch="master"
 manifest="default.xml"
 
 # create new directory to build in
-
 mkdir ${repoName}
 cd ${repoName}
 

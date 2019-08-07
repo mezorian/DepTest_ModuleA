@@ -13,15 +13,14 @@ install:
   - git config --global color.ui false
 
 script:
-  - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH} ${TRAVIS_BUILD_WEB_URL}"
-  - printenv
-  - repoName="DepTest_ModuleA"
-  - repoURL="https://github.com/mezorian/DepTest_ModuleA.git"
+  - echo "clone dependency repos"
+  - repoURL="https://github.com/${TRAVIS_REPO_SLUG}.git"
   - branch=${TRAVIS_BRANCH}
   - manifest="default.xml"
   - repo init -u ${repoURL} -b ${branch} -m ${manifest}
   - repo sync
   - ls -la
+  - echo "start build"
   - source /opt/qt55/bin/qt55-env.sh
   - /opt/qt55/bin/qmake
   - make clean

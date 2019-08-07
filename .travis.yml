@@ -18,6 +18,7 @@ script:
   - repoURL="https://github.com/mezorian/DepTest_ModuleA.git"
   - branch="master"
   - manifest="default.xml"
+  - git config --global color.ui false
   - repo init -u ${repoURL} -b ${branch} -m ${manifest}
   - repo sync
   - ls -la

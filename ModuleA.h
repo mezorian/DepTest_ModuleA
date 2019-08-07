@@ -1,8 +1,7 @@
 #ifndef ModuleA_H
 #define ModuleA_H
 
-#include "Logger.h"
-
+#include "mezorian/DepTest_Logging/Logger.h"
 
 class ModuleA {
     public:

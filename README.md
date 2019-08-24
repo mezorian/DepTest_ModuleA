@@ -5,8 +5,8 @@ Dependency Test - Submodule A
 
 ## Requirements 
 
- 1. Installation of google repo tool
- 2. Installation of qt
+ 1. Installation of qt
+ 2. Installation of python3-pip and gitpython
 
 ## Setup / Clone & Compile 
 
@@ -22,8 +22,9 @@ git clone ${repoURL}
 cd ${repoName}
 
 # download all depency repos
-repo init -u ${repoURL} -b ${branch} -m ${manifest}
-repo sync
+git clone https://github.com/mezorian/EasyDepend.git
+cp EasyDepend/*.py .
+python3 example.py
 
 # build
 source /opt/qt55/bin/qt55-env.sh

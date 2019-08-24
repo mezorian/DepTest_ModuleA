@@ -5,7 +5,7 @@
 
 namespace submodule_a {
 
-    using Logger = logger8::Logger;
+    using Logger = logger9::Logger;
 
     class ModuleA {
         public:

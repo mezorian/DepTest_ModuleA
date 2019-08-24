@@ -3,5 +3,5 @@
 <manifest>
 	<remote  name="github" fetch="https://github.com" />
 	<default revision="refs/heads/master" remote="github" sync-j="4" />
-	<project name="mezorian/DepTest_Logging" remote="github" revision="refs/tags/v9.0" />
+	<project name="mezorian/DepTest_Logging" remote="github" revision="devel" />
 </manifest>
